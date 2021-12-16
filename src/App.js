@@ -2,7 +2,7 @@
 import './App.css';
 import Header from './Header';
 import Home from "./Home";
-import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch,Route} from "react-router-dom";
 import Checkout from './Checkout';
 
 function App() {
@@ -10,15 +10,16 @@ function App() {
     <div className="App">
     <Router>
     <Header/>
-      <Routes>
-        <Route path ="/" element={<Home/>}>
+      <Switch>
         
-        </Route>
-        <Route path = "/checkout" element={<Checkout/>}>
-       
+        <Route path = "/checkout" >
+        <Checkout/>
          
         </Route>
-      </Routes>
+        <Route path ="/" >
+        <Home/>
+        </Route>
+        </Switch>
       
       
       </Router> 
