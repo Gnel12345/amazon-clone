@@ -29,7 +29,7 @@ className = "header_searchIcon"/>
             <div className = "header_nav">
                 <Link to= {!user && "/login"}>
                 <div onClick={handleAuthentication} className ="header_option">
-                    <span className = "Header-optionLineOne">Hello </span>
+                    <span className = "Header-optionLineOne">Hello {!user?'Guest':user.email} </span>
                     <span className = "Header-optionLineTwo"> {user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
                 </Link >
